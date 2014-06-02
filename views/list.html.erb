@@ -1,0 +1,17 @@
+<div class="container-fluid">
+
+<div>
+<% @recipes_list.each do |recipe| %>
+
+<p class="bg-warning"><a href="/recipes/<%=recipe["id"]%>"><%= recipe["name"] %></p>
+<% end %>
+</div>
+<div>
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-chevron-left"></span><a href="/recipes?page=<%= @page - 1 %>">Previous</a>
+</button>
+
+<button type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-chevron-right"></span><a href="/recipes?page=<%= @page + 1 %>"> Next</a>
+</button>
+</div>

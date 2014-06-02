@@ -1,0 +1,36 @@
+<div class="container-fluid">
+
+  <h1><%= @page_title %></h1>
+
+    <div class="row">
+      <div class="col-xs-12 col-md-8">
+        <h3>Description</h3>
+        <p>
+          <%= @recipe_info["description"] %>
+        </p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-6">
+        <h3>Ingredients</h3>
+          <ul>
+            <% @ingredients.each do |ingredient| %>
+            <li> <%=ingredient %> </li>
+            <% end %>
+          </ul>
+        </div>
+      <div class="col-xs-6">
+        <h3>Instructions</h3>
+          <!--  Instructions Loop -->
+        <ul>
+          <% @instructions.each do |instruction| %>
+           <li> <%= instruction %></li>
+           <% end %>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+    </div>
